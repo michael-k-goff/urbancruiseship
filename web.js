@@ -9,6 +9,7 @@ var fs = require('fs');
 // Additional modules
 var structure = require('./structure');
 var dashboard = require('./dashboard');
+var kaya = require('./kaya');
 
 // Login credentials kept in a separate file
 var credentials = JSON.parse(fs.readFileSync("credentials.json").toString())
@@ -40,6 +41,7 @@ app.post('/login', function (req, res) {dashboard.login(req,res)});
 app.get('/dashboard',auth,function (req,res) {res.send(dashboard.dashboard())});
 app.get('/all_images',auth,function (req,res) {res.send(dashboard.all_images())});
 app.post('/file_upload',auth,function(req,res) {dashboard.file_upload()}); // Currently not working
+app.get('/kaya', function(req, res) {kaya.kaya(req, res)});
 
 app.listen(app.get('port'), function() {
 	console.log("Node app is running at localhost:" + app.get('port'))
