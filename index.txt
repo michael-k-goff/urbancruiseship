@@ -1,0 +1,81 @@
+        <!-- Portfolio Section -->
+        <div class="row" style="margin-left:20%; margin-right:20%">
+		    <div class="col-lg-12">
+		        <!--<h1 class="page-header">
+		            Welcome to Urban Cruise Ship
+		        </h1>-->
+				<br><br>
+				<p style="font-size:20px">
+				Founded in 2014, Urban Cruise Ship is a think tank dedicated to presenting solutions to the most pressing problems in energy and land use.
+				</p>
+				<br>
+		    </div>
+                <span style="font-size:250%;">Our Focus Areas</a>
+            	<a href="topic/society">
+                    <img class="img-hover" src="society_icon.png" alt="Society" style="height:30px;">
+				</a>
+				<a href="topic/economy">
+                    <img class="img-hover" src="economics_icon.png" alt="Economy" style="height:30px;">
+				</a><br>
+				<a href="topic/energy_production">
+                    <img class="img-hover" src="energy_production_icon.png" alt="Energy Production" style="height:30px;">
+				</a>
+				<a href="topic/energy_distribution">
+                    <img class="img-hover" src="energy_distribution_icon.png" alt="Energy Distribution" style="height:30px;">
+				</a><br>
+				<a href="topic/industry">
+                    <img class="img-hover" src="industry_icon.png" alt="Industry" style="height:30px;">
+				</a>
+				<a href="topic/foodwater">
+                    <img class="img-hover" src="food_and_water_icon.png" alt="Food and Water" style="height:30px;">
+				</a>
+				<a href="topic/cities">
+                    <img class="img-hover" src="cities_icon.png" alt="Cities" style="height:30px;">
+				</a>
+				<a href="topic/transport">
+                    <img class="img-hover" src="transportation_icon.png" alt="Transportation" style="height:30px;">
+				</a>
+        </div>
+		<br><br>
+        <!-- /.row -->
+
+        <!-- Marketing Icons Section -->
+        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Standards</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> Data-Driven</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship makes a rigorous assessment of the data behind energy, land use, and urban design.  Our work is driven by data and science, not ideology, opinion, and special interest.</p> 
+                        <a href="about" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> Comprehensive</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship analyzes the issues from engineering, economic, social, and political perspectives. Comprehensiveness should increase the likelihood that solutions will be workable.</p>
+                        <a href="about" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> Effective</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship seeks to provide for policymakers, business leaders, and individuals the most relevant and effective solutions to today's most pressing ecological challenges.</p>
+                        <a href="about" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
