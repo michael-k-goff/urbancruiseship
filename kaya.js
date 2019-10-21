@@ -16,8 +16,7 @@ function kaya(req, res) {
 		}
 		else {
 			res.send(JSON.stringify(response.rows));
-			console.log(response.rows);
-			pool.end();
+			//pool.end();
 		}
 	});
 }
