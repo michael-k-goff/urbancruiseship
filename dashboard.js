@@ -41,7 +41,7 @@ function render_image_data(im,num) {
 		}
 	}
 	if ("source_file" in im) {
-		result += "Source file: " + im["source_file"] + "<br><br>";
+		result += "<font color='#777777'>Source file: " + im["source_file"] + "</font><br><br>";
 	}
 	return result + "<br>";
 }
