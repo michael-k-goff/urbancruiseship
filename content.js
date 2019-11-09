@@ -23,7 +23,7 @@ function render_paragraph_image(para, data, ref_ids) {
 
 function render_paragraph_caption(para, data, ref_ids) {
 	var blocks = para.split("!");
-	return "<center style=\"font-size:11px\">"+ref.add_references(blocks[1],ref_ids, data.references)+"</center>";
+	return "<center style=\"font-size:11px; margin-left:30%; margin-right:30%\">"+ref.add_references(blocks[1],ref_ids, data.references)+"</center>";
 }
 
 function render_paragraph_list(para, data, ref_ids) {
