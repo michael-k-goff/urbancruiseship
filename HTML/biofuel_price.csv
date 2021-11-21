@@ -1,0 +1,16 @@
+Fuel,Price (USD/GJ),Source
+Ethanol,0.0285353535354,https://www.iea.org/newsroom/news/2019/march/how-competitive-is-biofuel-production-in-brazil-and-the-united-states.html
+Biodiesel,0.0247826086957,https://www.iea.org/newsroom/news/2019/march/how-competitive-is-biofuel-production-in-brazil-and-the-united-states.html
+Methanol to Gasoline,0.0249144418294,https://www.energy.gov/sites/prod/files/2014/03/f14/aviation_biofuels_haq.pdf
+Pyrolysis,0.0162141605557,https://www.energy.gov/sites/prod/files/2014/03/f14/aviation_biofuels_haq.pdf
+Fischer-Tropsch,0.0383603310707,https://www.energy.gov/sites/prod/files/2014/03/f14/aviation_biofuels_haq.pdf
+Corn Ethanol,0.0232323232323,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Sugarcane Ethanol,0.00909090909091,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Cellulosic Ethanol,0.030303030303,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Soy Oil,0.0252173913043,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Palm Oil,0.0211594202899,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Jatropha Oil,0.0191304347826,https://www.researchgate.net/figure/Biofuel-production-costs-comparison-in-different-feedstocks-broken-down-to-different_fig6_259704800
+Hydrothermal Liquefaction from Forest Products,0.020691,https://www.sciencedirect.com/science/article/pii/S0306261917303513
+Microalgae (Seaweed),0.0449275362319,https://www.mdpi.com/2306-5354/4/4/92/pdf
+Cellulosic Ethanol,0.034289014875,https://onlinelibrary.wiley.com/doi/full/10.1002/bbb.1634
+"Wholesale Gasoline, NY Harbor",0.0154232258944,https://www.eia.gov/todayinenergy/prices.php

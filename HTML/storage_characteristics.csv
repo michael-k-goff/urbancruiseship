@@ -1,0 +1,10 @@
+,Storage Technology,"Primary Response (cents/kWh, low estimate)","Primary Response (cents/kWh, high estimate)","Secondary Response (cents/kWh, low estimate)","Secondary Response (cents/kWh, high estimate)","Seasonal Storage (cents/kWh, low estimate)","Seasonal Storage (cents/kWh, high estimate)",Efficiency,Cost - Capacity (USD/kWh),Cost - Power (USD/kW),Greenhouse Gases (g CO2e/kWh),GHG from inefficiency (g CO2e/kWh)
+0,Pumped Hydro,-0.1,-0.1,14.0,41.5,75.0,650.0,78,80,1129,7.79,14.1025641026
+1,Compressed Air,-0.1,-0.1,30.0,87.0,80.0,620.0,44,39,871,52.8,63.6363636364
+2,Flywheel,11.0,32.0,20.0,126.0,-0.1,-0.1,88,5399,641,-1.0,6.81818181818
+3,Lithium Ion,30.0,85.0,22.0,53.0,-0.1,-0.1,86,802,678,41.64,8.13953488372
+4,Sodium Sulphur,55.0,185.0,38.0,110.0,-0.1,-0.1,81,738,657,15.0,11.7283950617
+5,Lead Acid,57.5,102.0,80.0,255.0,-0.1,-0.1,84,471,675,2.0,9.52380952381
+6,Vanadium Redox Flow,25.0,60.0,20.0,40.0,1000.0,3750.0,73,760,829,2.0,18.4931506849
+7,Supercapacitor,25.0,60.0,102.0,265.0,-0.1,-0.1,91,13560,296,-1.0,4.94505494505
+8,Hydrogen,90.0,560.0,80.0,365.0,100.0,560.0,40,31,5417,-1.0,75.0

@@ -10,6 +10,12 @@
     <meta name="author" content="">
 
     <title>****</title>
+	
+	<style>
+		#grad {
+		  background-image: linear-gradient(to right, #FFF,#FFF,#FFF,#FFF,#FFF,#FFF,#****);
+		}
+	</style>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -29,11 +35,12 @@
 		
 </head>
 
-<body>
+<body id="grad">
+	
 
 	
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="margin-top:0%;">
 		<!--<table style="margin-left:20%; margin-right:20%">
 			<tr><td> <a href="/"><img class="img-responsive img-portfolio img-hover" src="/logo.png" width="50%" height="50%" alt="Urban Cruise Ship" title="Home"></a> </td><td> asdf<br>asdf2</td></tr>
 		</table>-->
@@ -43,7 +50,7 @@
 	        <footer>
 	            <div class="row">
 	                <div class="col-lg-12">
-	                    <p>Copyright &copy; Urban Cruise Ship 2019</p>
+	                    <p>Copyright &copy; Urban Cruise Ship 2021</p>
 	                </div>
 	            </div>
 	        </footer>
@@ -62,6 +69,49 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+	
+	var coll = document.getElementsByClassName("collapsible");
+	var contents = document.getElementsByClassName("content");
+
+	for (let i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    //var content = this.nextElementSibling;
+		var content = contents[i];
+	    if (content.style.display === "block") {
+	        content.style.display = "none";
+	    } else {
+	        content.style.display = "block";
+	    }
+		setTimeout(()=>{
+			content.classList.toggle("content-expanded");
+			content.classList.toggle("content-shrinking");
+		});
+		setTimeout(()=>{
+			content.classList.toggle("content-contracted");
+		},6000);
+	  });
+	  
+	  backlink = contents[i].lastChild;
+	  backlink.addEventListener('click', () => {
+		  var content = contents[i];
+		  var button = coll[i];
+		  button.classList.toggle("active");
+  	      if (content.style.display === "block") {
+  	          content.style.display = "none";
+  	      } else {
+  	          content.style.display = "block";
+  	      }
+  		  setTimeout(()=>{
+  		      content.classList.toggle("content-expanded");
+			  content.classList.toggle("content-shrinking");
+  		  });
+  		  setTimeout(()=>{
+  			  content.classList.toggle("content-contracted");
+  		  },6000);
+		  return false;
+	  })
+	}
     </script>
 </body>
 

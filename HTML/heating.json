@@ -1,0 +1,236 @@
+{
+	"title":"Heating and Cooling",
+	"parent_link":"cities",
+	"parent_name":"Cities",
+	"sections": [
+		{
+			"content":[
+				"The majority of <a href=\"/solution/building_energy\">residential and commercial energy consumption</a> is used for heating and cooling. Most heating and cooling energy can be saved through better equipment, compact buildings with shared walls, and more efficient energy sources such as a district heating and cooling system. Thus the challenge of efficient heating and cooling is both a matter of better heating and cooling technology as well as <a href=\"/solution/density\">urban density</a>."
+			]
+		},
+		{
+			"name":"Energy Savings Potential",
+			"content":[
+				"The following portrays the potential for selected tools to save energy on heating and cooling. The savings from housing forms (attached housing and apartments) portray savings relative to detached houses [atc2][nrel_office_chair][non_vapor][iea_envelope][passive_cooling1][lubinski][nest][dc_energy][arab_solar_cooling][atc1].",
+				"-Heating and Cooling Potential Energy Savings.jpg-70"
+			]
+		},
+		{
+			"name":"Heating Source",
+			"content":[
+				"The following portrays the energy, economic, and environmental characteristics of heating fuel options for space heating, water heating, cooking, and clothes drying for a typical new home [aga][coal_efficiency][hydrogen_ccc][heat_pump_sg][lubinski][doe_wood][epa_emissions_factors][gas_hp][dhc_overview]. For electricity-based heating sources, emissions factors and primary energy are based on the average US electricity mix in 2014.",
+				"-Heating Source Consumption and Emissions.jpg-60",
+				"Air-source heat pumps work best in moderate climates, and the high performance figures might not be achievable in cold climates [doe_heatpump]. District heating systems require relatively <a href='/solution/density'>high population densities</a> to be economically viable, and their energy and environmental performance is highly dependent on the energy source. The primary energy estimate above is based on European Union standards [lubinski] and the greenhouse gas estimate from world performance [dhc_overview]."
+			]
+		}
+	],
+	"references": [
+		{
+			"ref":"dc_energy",
+			"author":"Stellar Energy",
+			"title":"District Cooling",
+			"date":"Accessed February 16, 2019",
+			"url":"http://www.stellar-energy.net/what-we-do/solutions/district-cooling.aspx"
+		},
+		{
+			"ref":"hydrogen_ccc",
+			"author":"Committee on Climate Change",
+			"title":"Hydrogen in a low-carbon economy",
+			"date":"2018",
+			"url":"https://www.theccc.org.uk/publication/hydrogen-in-a-low-carbon-economy/"
+		},
+		{
+			"ref":"gas_hp",
+			"author":"Vineyard, E., Abu-Heiba, A.,  Mahderekal, I",
+			"title":"Design and development of a residential gas-fired heat pump",
+			"date":"2017",
+			"journal":"12th IEA Heat Pump Conference 2017",
+			"url":"http://hpc2017.org/wp-content/uploads/2017/05/O.4.7.1-Design-and-Development-of-Residential-Gas-Fired-Heat-Pump.pdf"
+		},
+		{
+			"ref":"lubinski",
+			"author":"Lubinski, B.",
+			"title":"District Heating and Cooling + EPBD: Implementation via standardization",
+			"date":"2015",
+			"url":"http://www.ehpcongress.org/archive-2015/wp-content/uploads/2015/04/63_Boris_LUBINSKI.pdf"
+		},
+		{
+			"ref":"dh_2mwh",
+			"author":"Intelligent Energy Europe, Urban Planners with Renewable Energy Skills",
+			"title":"Energy Distribution: District Heating and Cooling - DHC",
+			"date":"Accessed November 15, 2018",
+			"url":"https://www.euroheat.org/wp-content/uploads/2016/04/UP-RES_M6_District_Heating_and_Cooling.pdf"
+		},
+		{
+			"ref":"district_scotland",
+			"author":"Heat Network Partnership for Scotland",
+			"title":"District Heating Strategy Factsheet",
+			"date":"Accessed November 1, 2018",
+			"url":"http://www.districtheatingscotland.com/wp-content/uploads/2017/10/Module-5-Infrastructure.pdf"
+		},
+		{
+			"ref":"doe_wood",
+			"author":"U. S. Department of Energy",
+			"title":"Wood and Pellet Heating",
+			"date":"Accessed November 14, 2018",
+			"url":"https://www.energy.gov/energysaver/home-heating-systems/wood-and-pellet-heating"
+		},
+		{
+			"ref":"heat_pump_sg",
+			"author":"Fischer, D., Madani, H.",
+			"title":"On heat pumps in smart grids: A review",
+			"journal":"Renewable and Sustainable Energy Systems <b>70</b>, pp. 342-357",
+			"date":"April 2017",
+			"url":"https://www.sciencedirect.com/science/article/pii/S1364032116309418"
+		},
+		{
+			"ref":"aga",
+			"author":"American Gas Association",
+			"title":"A Comparison of Energy Use, Operation Costs, and Carbon Dioxide Emissions of Home Appliances, 2016 Update",
+			"date":"July 2017",
+			"url":"https://www.aga.org/sites/default/files/ea_2017-03_appliance_cost_and_emissions_comparison_2016_0.pdf"
+		},
+		{
+			"ref":"epa_emissions_factors",
+			"author":"U. S. Environmental Protection Agency",
+			"title":"Emission Factors for Greenhouse Gas Inventories",
+			"date":"April 2014",
+			"url":"https://www.epa.gov/sites/production/files/2015-07/documents/emission-factors_2014.pdf"
+		},
+		{
+			"ref":"coal_efficiency",
+			"author":"Brennan, J.",
+			"title":"What Is the Typical Efficiency of a Coal Boiler?",
+			"date":"September 2017",
+			"url":"https://homesteady.com/info-12149447-typical-efficiency-coal-boiler.html"
+		},
+		{
+			"ref":"nrel_office_chair",
+			"author":"Carmichael, S., et al.",
+			"title":"Annual Energy Savings and Thermal Comfort of Autonomously Heated and Cooled Office Chairs",
+			"journal":"National Renewable Energy Laboratory, Office of Energy Efficiency & Renewable Energy, U. S. Department of Energy",
+			"date":"July 2016",
+			"url":"https://www.nrel.gov/docs/fy16osti/66431.pdf"
+		},
+		{
+			"ref":"eu_pef",
+			"author":"Latõšov, E., Volkova, A., Siirde, A., Kurnitski, J., Thalfeldt, M.",
+			"title":"Primary energy factor for district heating networks in European Union member states",
+			"journal":"Energy Procedia <b>116</b>, pp. 69-77",
+			"date":"June 2017",
+			"url":"https://www.sciencedirect.com/science/article/pii/S1876610217322634"
+		},
+		{
+			"ref":"dhc_overview",
+			"author":"Werner, S.",
+			"title":"International review of district heating and cooling",
+			"date":"October 2017",
+			"journal":"Energy <b>137</b>, pp. 617-631",
+			"url":"https://www.sciencedirect.com/science/article/pii/S036054421730614X"
+		},
+		{
+			"ref":"doe_heatpump",
+			"author":"U. S. Department of Energy",
+			"title":"Heat Pump Systems",
+			"date":"Accessed November 14, 2018",
+			"url":"https://www.energy.gov/energysaver/heat-and-cool/heat-pump-systems"
+		},
+		{
+			"ref":"recs",
+			"author":"U. S. Energy Information Administration",
+			"title":"2015 Residential Energy Consumption Survey",
+			"date":"2017",
+			"url":"https://www.eia.gov/consumption/residential/"
+		},
+		{
+			"ref":"cbecs",
+			"author":"U. S. Energy Information Administration",
+			"title":"2012 Commercial Buildings Energy Consumption Survey",
+			"date":"2015",
+			"url":"https://www.eia.gov/consumption/commercial/"
+		},
+		{
+			"ref":"un_district",
+			"author":"United Nations Environment Programme",
+			"title":"District Energy in Cities: Unlocking the Potential of Energy Efficiency and Renewable Energy",
+			"date":"February 2015",
+			"url":"https://wedocs.unep.org/bitstream/handle/20.500.11822/9317/-District_energy_in_cities_unlocking_the_potential_of_energy_efficiency_and_renewable_ene.pdf?sequence=2&"
+		},
+		{
+			"ref":"wit_district",
+			"author":"Gudmundsson, O., Thorsen, J., Zhang, L.",
+			"title":"Cost analysis of district heating compared to its competing technologies",
+			"date":"2013",
+			"journal":"WIT Transactions on Ecology and the Environment <b>176</b>, pp. 3-13",
+			"url":"https://www.witpress.com/Secure/elibrary/papers/ESUS13/ESUS13009FU1.pdf"
+		},
+		{
+			"ref":"hp_district",
+			"author":"Arnaudo, M., Zaalouk, O., Topel, M., Laumert, B.",
+			"title":"Techno-economic Analysis Of Integrated Energy Systems At Urban District Level - A Swedish Case Study",
+			"journal":"Energy Procedia <b>149</b>, pp. 286-296",
+			"date":"September 2018",
+			"url":"https://www.sciencedirect.com/science/article/pii/S1876610218305253"
+		},
+		{
+			"ref":"heating_cc",
+			"author":"HomeAdvisor",
+			"title":"Heating & Cooling Cost Guides",
+			"date":"Accessed November 14, 2018",
+			"url":"https://www.homeadvisor.com/cost/heating-and-cooling/"
+		},
+		{
+			"ref":"non_vapor",
+			"author":"Goetzler, W., Zogg, R., Young, J., Johnson, C.",
+			"title":"Energy Savings Potential and RD&D Opportunities for Non-Vapor-Compression HVAC Technologies",
+			"date":"March 2014",
+			"journal":"U.S. Department of Energy, Energy Efficiency & Renewable Energy, Building Technologies Office. Prepared by Navigant Consulting, Inc.",
+			"url":"https://www.energy.gov/sites/prod/files/2014/03/f12/Non-Vapor%20Compression%20HVAC%20Report.pdf"
+		},
+		{
+			"ref":"arab_solar_cooling",
+			"author":"United Nations Environment Programme",
+			"title":"Assessment on the Commercial Viability of Solar Cooling Technologies and Applications in the Arab Region",
+			"date":"2014",
+			"url":"https://www.solarthermalworld.org/sites/gstec/files/story/2016-04-05/solar_cooling_in_arab_region_0.pdf"
+		},
+		{
+			"ref":"passive_cooling1",
+			"author":"Kamal, M.",
+			"title":"An Overview of Passive Cooling Techniques in Buildings: Design Concepts and Architectural Interventions",
+			"journal":"Acta Technica Napocensis: Civil Engineering & Architecture <b>55</b>(1), pp. 84-97",
+			"date":"2012",
+			"url":"https://www.researchgate.net/publication/312432251_An_overview_of_passive_cooling_techniques_in_buildings_Design_concepts_and_architectural_interventions"
+		},
+		{
+			"ref":"nest",
+			"author":"Nest Labs",
+			"title":"Energy Savings from the Nest Learning Thermostat: Energy Bill Analysis Results",
+			"date":"February 2015",
+			"url":"https://nest.com/thermostats/real-savings/"
+		},
+		{
+			"ref":"atc1",
+			"author":"Yang, L., Yan, H., Lam, J.",
+			"title":"Thermal comfort and building energy consumption implications - A review",
+			"journal":"Applied Energy <b>115</b>, pp. 164-173",
+			"date":"February 2014",
+			"url":"https://www.sciencedirect.com/science/article/pii/S0306261913008921"
+		},
+		{
+			"ref":"atc2",
+			"author":"Barbadilla-Martín, E., Guadix Martín, J., Manuel Salmerón Lissénb J., Sánchez Ramos, J., Álvarez Domínguez, S.",
+			"title":"Assessment of thermal comfort and energy savings in a field study on adaptive comfort with application for mixed mode offices",
+			"journal":"Energy and Buildings <b>167</b>, pp. 281-289",
+			"date":"May 2018",
+			"url":"https://www.sciencedirect.com/science/article/pii/S0378778817330293"
+		},
+		{
+			"ref":"iea_envelope",
+			"author":"International Energy Agency",
+			"title":"Technology Roadmap: Energy efficient building envelopes",
+			"date":"2013",
+			"url":"https://webstore.iea.org/technology-roadmap-energy-efficient-building-envelopes"
+		}
+	]
+}

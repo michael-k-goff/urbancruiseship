@@ -1,0 +1,7 @@
+Reactor Type,Rationale,Technological Readiness Level,Number of Projects,Demonstration,Commercial,Experimental,Assessment
+Sodium-Cooled Fast Reactor,Closed fuel cycle,3-5,10,3,6,1,Yes
+High Temperature Gas-Cooled Reactor,"High grade heat for industrial processes, hydrogen",5,4,2,2,0,Yes
+Gas-Cooled Fast Reactor,"Process heat, high burnup, less waste",2,3,2,1,0,No
+Lead-Cooled Fast Reactor,"Simpler design, safety",3,9,4,2,3,Yes
+Supercritical Water Cooled Reactor,"Simpler design, lower capital cost, enable SMR",3,3,3,0,0,No
+Molten Salt Reactor,"Safety, less waste, use thorium",3,9,3,6,0,Yes

@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
+    <meta charset="utf-8">
+
+
+
+    <!-- Richard Burd's Fontawsome Account link tied to his Gmail account -->
+    <script src="https://kit.fontawesome.com/07a2e01765.js" crossorigin="anonymous"></script>
+
+
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+    <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
+    <!-- NOTE: the link must be from the './public' directory of the application as specified in 'package.json' here: "build-css:dev": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css" -->
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+
+    <!-- NOTE: this is a tempoary link in case we want to copy & paste the current UCS Homepage via. "View page source" -->
+    <!-- When the new UCS web page is rebuilt, this should be removed so we have faster loading times -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+      /* NOTE: this link works locally, but not on Heroku, so I'm trying the link above */
+      /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
+      @import url('https://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/varela-round-2');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/arreia-black');
+      @import url('http://fonts.cdnfonts.com/css/bpg-arial');
+
+      .arial-rounded-mt-bold-font {
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+      }
+
+      .bpg-arial-font {
+        font-family: 'BPG Arial', sans-serif;
+      }
+
+      .roboto-font {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .varela-round-font {
+        font-family: 'Varela Round', sans-serif;
+      }
+
+    </style>
+
+    <title>About Us - Urban Cruise Ship</title>
+  </head>
+  <body>
+    <div class="py-14">
+      
+<!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
+<!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
+
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  #navbar {
+    font-family: 'Varela Round', sans-serif;
+  }
+</style>
+
+<!-- navbar goes here -->
+<div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
+  <nav class="bg-gray-300">
+    <div class="max-w-5xl mx-auto bg-gray-400 pr-2">
+      <div class="flex justify-between text-lg">
+        <div class="flex space-x-4">
+          <!-- logo -->
+          <div>
+            <a href="./" class="flex items-center py-4 px-4 text-gray-900 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
+              <span class="font-bold">Home</span>
+            </a>
+          </div>
+          <!-- primary nav -->
+          <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
+            <a href="./about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
+            <a href="./standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
+            <a href="./team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
+            <a href="./activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
+          </div>
+        </div>
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="mailto:michael@urbancruiseship.org" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">Contact</a>
+        </div>
+
+
+        <!-- mobile button goes here -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- mobile menu-->
+  <div class="mobile-menu hidden md:hidden divide-y divide-gray-300 border-b-2 border-gray-300" id="mobile-dropdown">
+    <a href="./about" class="bg-gray-200 block  focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
+    <a href="./standards" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100  py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Standards</a>
+    <a href="./team" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Crew</a>
+    <a href="./activities" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Activities</a>
+    <a href="mailto: michael@urbancruiseship.org" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Contact</a>
+  </div>
+</div>
+
+<!-- controlls the mobile dropdown menu-->
+<script type="text/javascript">
+  // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
+  // sources:
+  //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
+  //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
+
+  // grab everything we need
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  // add event listeners
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+  // sources:
+  //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+  //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+      prevScrollpos = currentScrollPos;
+
+    // if you set this "200" value to 0, you loose the delay effect
+    } else if (currentScrollPos > prevScrollpos + 200){
+      // the "-59px" below controlls how far up the navbar moves off the viewport when the user scrolls up
+      document.getElementById("navbar").style.top = "-59px";
+
+      // this section hides the mobile dropdown menu when the user scrolls down
+      let mobileDropdown = document.getElementById("mobile-dropdown")
+      if (!(mobileDropdown.classList.contains('hidden'))) {
+
+        // the "-244px" below controlls how far up the navbar moves off the viewport when the user scrolls up...when the mobile dropdown menu is deployed
+        document.getElementById("navbar").style.top = "-244px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
+</script>
+
+<!-- causes the navbar to drop-down into view when the user clicks the "Tab" key -->
+<!-- this is an accessability feature for people who cannot use a mouse properly -->
+<script type="text/javascript">
+  document.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    // Number 9 is the "Tab" key on the keyboard
+    if (event.keyCode === 9) {
+      // this script is for accessability;
+      // the user can "tab" and when the tabindex falls onto the navigation bar,
+      // the navigation bar will drop-down into view
+      document.getElementById("navbar").style.top = "0px";
+    }
+  });
+</script>
+
+<!-- How TO - Hide Menu on Scroll -->
+<!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
+<style media="screen">
+  #navbar {
+    transition: top 0.5s; /* Transition effect when sliding down (and up) */
+  }
+</style>
+
+        <!-- "max-w-screen-lg" limits the overall width of the website -->
+        <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
+        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto">
+          <style media="screen">
+  @media only screen and (max-width: 550px) {
+    #desktop-title {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 551px) {
+    #mobile-n-tablet-title {
+      display: none;
+    }
+  }
+</style>
+
+<style media="screen">
+
+</style>
+
+<div class="bg-gray-100 text-gray-800">
+  <!-- this component uses custom-colors not available in Tailwind-CSS -->
+<!-- these colors are "faded-out" version of the colors on the homepage for each of the specialized sites -->
+<style>
+  /* energy */
+  #spec-nav-1 {
+    background-color: #f2d0a0;
+    color: #3d342b
+  }
+  #spec-nav-1:hover {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+  #spec-nav-1:focus {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+
+  /* matter */
+  #spec-nav-2 {
+    background-color: #a1cf8f;
+    color: #364232
+  }
+  #spec-nav-2:hover {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+  #spec-nav-2:focus {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+
+  /* habitat */
+  #spec-nav-3 {
+    background-color: #8fcfc1;
+    color: #324240
+  }
+  #spec-nav-3:hover {
+    background-color: #19363b;
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-3:focus {
+    background-color: #19363b
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+
+  /* cities */
+  #spec-nav-4 {
+    background-color: #c49d9d;
+    color: #453632
+  }
+  #spec-nav-4:hover {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+  #spec-nav-4:focus {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+
+  /* waste */
+  #spec-nav-5 {
+    background-color: #e0d9af;
+    color: #454532
+  }
+  #spec-nav-5:hover {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+  #spec-nav-5:focus {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+
+  /* oceans */
+  #spec-nav-6 {
+    background-color: #8fb3cf;
+    color: #323645
+  }
+  #spec-nav-6:hover {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-6:focus {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+
+  /* space */
+  #spec-nav-7 {
+    background-color: #adadad;
+    color: #292929
+  }
+  #spec-nav-7:hover {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+  #spec-nav-7:focus {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+
+  /* costs */
+  #spec-nav-8 {
+    background-color: #b0a880;
+    color: #414232
+  }
+  #spec-nav-8:hover {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-8:focus {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+
+  /* history */
+  #spec-nav-9 {
+    background-color: #91a8b8;
+    color: #202c40
+  }
+  #spec-nav-9:hover {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-9:focus {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+</style>
+<nav> <!-- first made for the "./about" page-->
+  <div class="arial-rounded-mt-bold-font sm:flex sm:justify-between flex-wrap grid grid-cols-3 lg:grid:ignore pt-3 px-3 pb-2 text-center tracking-wide" style="border-bottom: 2px solid gray">
+    <a href="./site/energy" target="_blank" class="m-1 px-2 rounded" id="spec-nav-1">ENERGY</a>
+    <a href="./site/matter" target="_blank" class="m-1 px-2 rounded" id="spec-nav-2">MATTER</a>
+    <a href="./site/habitat" target="_blank" class="m-1 px-2 rounded" id="spec-nav-3">HABITAT</a>
+    <a href="./site/cities" target="_blank" class="m-1 px-2 rounded" id="spec-nav-4">CITIES</a>
+    <a href="./site/waste" target="_blank" class="m-1 px-2 rounded" id="spec-nav-5">WASTE</a>
+    <a href="./site/oceans" target="_blank" class="m-1 px-2 rounded" id="spec-nav-6">OCEANS</a>
+    <a href="./site/space" target="_blank" class="m-1 px-2 rounded" id="spec-nav-7">SPACE</a>
+    <a href="./site/internalization" target="_blank" class="m-1 px-2 rounded" id="spec-nav-8">COSTS</a>
+    <a href="./site/history" target="_blank" class="m-1 px-2 rounded" id="spec-nav-9">HISTORY</a>
+  </div>
+</nav>
+
+  <br>
+  <div class="mx-4">
+    <!-- this title is for the desktop view in which the entire title is visable -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="desktop-title">About Urban Cruise Ship</h1>
+
+    <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">About</h1>
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Urban Cruise Ship</h1>
+    <h4 class="bpg-arial-font flex justify-center">Founded in 2014, Urban Cruise Ship presents environmental solutions.</h4>
+  </div>
+  <br>
+  
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
+        .elliptical-geometry {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+        .shadow-geometry {
+          box-shadow: 4px 6px 6px #86888f;
+        }
+        .shadow-geometry:hover {
+          box-shadow: 4px 6px 6px #575757;
+          transition: 500ms;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+          <div class="mx-2">
+          Why the name "Urban Cruise Ship"?
+          </div>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms>
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
+            <p>This comes from the concept of taking something that works well now, due to good design, and applying that elsewhere to solve problems.&nbsp; E.g. urban problems could be reduced if cities were designed more like cruise ships: attractive and enjoyable, but compact and with all residents' needs met within walking distance.</p><br><p>This is a classic application of design-approach transfer.&nbsp;  Urban Cruise Ship also explores other topics where this might work well. </p><br><p>Like a real ship, Urban Cruise Ship is navigational.&nbsp;  Its crew takes visitors to numerous ports of entry into different ways of solving problems. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <br>
+  
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
+        .elliptical-geometry {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+        .shadow-geometry {
+          box-shadow: 4px 6px 6px #86888f;
+        }
+        .shadow-geometry:hover {
+          box-shadow: 4px 6px 6px #575757;
+          transition: 500ms;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+          <div class="mx-2">
+          Why is Urban Cruise Ship Needed?
+          </div>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms>
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
+            <p>Progress in the modern environmental movement has been uneven in many key areas: biodiversity loss/species extinction, habitat degradation, spreading invasive species, ocean acidification, poor air quality, unhealthy water supplies, insufficiently-tested chemical exposures, lack of adequate sanitation, accelerating waste generation and disposal, litter, urban sprawl, fossil fuel depletion, climate change, storm/earthquake vulnerability, malnutrition, topsoil loss, food shortages, obesity, unsheltered living conditions, forced migration, cultural loss, and scenery defilement.</p><br><p>Education has spurred widespread desire for improvement in all of these areas, but to date, current solutions have not kept pace with increasing needs. Hence, better solutions are VERY much desired and needed now.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <br>
+  
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
+        .elliptical-geometry {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+        .shadow-geometry {
+          box-shadow: 4px 6px 6px #86888f;
+        }
+        .shadow-geometry:hover {
+          box-shadow: 4px 6px 6px #575757;
+          transition: 500ms;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+          <div class="mx-2">
+          What does Urban Cruise Ship seek to be?
+          </div>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms>
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
+            <p>We want to be a highly respected source of guidance, that provides the most helpful and accurate data, practical and sufficient analysis, and workable solutions for ecological problems. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <br>
+  
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
+        .elliptical-geometry {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+        .shadow-geometry {
+          box-shadow: 4px 6px 6px #86888f;
+        }
+        .shadow-geometry:hover {
+          box-shadow: 4px 6px 6px #575757;
+          transition: 500ms;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+          <div class="mx-2">
+          Who started Urban Cruise Ship and why?
+          </div>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms>
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
+            <p>Mathematician Michael Goff and designer John van der Harst met via the Nashville Peace and Justice Center, and worked together in Recycling Advocates of Middle Tennessee.&nbsp;  Both continued to work in various other organizations as well -- some with each other, and others apart.&nbsp;  Discussions continued over what worked and didn't.</p><br><p>Both wanted to maximize their effect. Each had prior preferences for future work, but conservatively chose to work together first on fundamental analysis which would properly prioritize choices systematically.  That was, and is, Urban Cruise Ship.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <br>
+  
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
+        .elliptical-geometry {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+        .shadow-geometry {
+          box-shadow: 4px 6px 6px #86888f;
+        }
+        .shadow-geometry:hover {
+          box-shadow: 4px 6px 6px #575757;
+          transition: 500ms;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+          <div class="mx-2">
+          What became Urban Cruise Ship's priorities?
+          </div>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms>
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
+            <p>Initially, clean energy production was a top priority, due to public interest, time urgency, and lack of progress to date.&nbsp; Land conservation was already high on our agenda.  However, systematic analysis revealed an even wider array of needs and solution "best deals."</p><br><p>Our standards section shows what our attitude has been toward analyzing our options.&nbsp;  Rigorously applying these standards, we reasoned, should result in the best set of priorities. </p><br><p>One type of priority emerged frequently: removal of special-interest subsidies, and getting taxation and regulation right, solve problems in many areas efficiently, as they then allow markets to drive the right choices thereafter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <br><br>
+
+        </main>
+
+      <br><br>
+<footer class="text-center tracking-widest text-gray-800 sm:text-2xl m-4 varela-round-font">Copyright © Urban Cruise Ship 2021</footer>
+
+
+    </div>
+  </body>
+</html>

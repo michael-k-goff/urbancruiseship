@@ -1,0 +1,9 @@
+Technology,Major Projects,Reaction,Rationale,Challenges
+Tokamak,"Joint European Torus, ITER, DEMO",D-T,Most developed,High cost
+Spherical Tokamak,"Tokamak Energy Ltd, MAST, Globus-M, NSTX",D-T,Smaller design,Superconducting magnets needed
+Stellerator,Wendelstein 7-X,D-T,Plasma stability,Complex design
+Field-Reversed Configuration,TAE Technologies,"D-T, D-He3, p-B11","Compact design, aneutronic fuels, space travel",Magnetic field less stable
+Inertial Confinement,National Ignition Facility,D-T,Simple reactor design,"Disappointing experimental results, potential high cost"
+Magneto-Inertial,"General Fusion, Helion Energy, MagLIF","D-T, D-He3, p-B11",Wider parameter space than MCF or ICF,Potential high cost of targets
+Z-Pinch,"Z-Machine, LPPFusion","D-T, D-He3, p-B11","Simple design, space travel",Difficulty controlling plasma
+Electrostatic,Polywell,"D-T, D-He3, p-B11",Neutron source for medical isotopes,Major doubts of feasibility for power production

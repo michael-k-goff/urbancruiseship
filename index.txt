@@ -6,7 +6,7 @@
 		        </h1>-->
 				<br><br>
 				<p style="font-size:20px">
-				Founded in 2014, Urban Cruise Ship is a think tank dedicated to presenting solutions to the most pressing problems in energy and land use.
+				Founded in 2014, Urban Cruise Ship presents solutions to problems in energy and related land use.
 				</p>
 				<br>
 		    </div>
@@ -39,43 +39,4 @@
 		<br><br>
         <!-- /.row -->
 
-        <!-- Marketing Icons Section -->
-        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
-            <div class="col-lg-12">
-                <h2 class="page-header">Our Standards</h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Data-Driven</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Urban Cruise Ship makes a rigorous assessment of the data behind energy, land use, and urban design.  Our work is driven by data and science, not ideology, opinion, and special interest.</p> 
-                        <a href="about" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Comprehensive</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Urban Cruise Ship analyzes the issues from engineering, economic, social, and political perspectives. Comprehensiveness should increase the likelihood that solutions will be workable.</p>
-                        <a href="about" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Effective</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Urban Cruise Ship seeks to provide for policymakers, business leaders, and individuals the most relevant and effective solutions to today's most pressing ecological challenges.</p>
-                        <a href="about" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+        

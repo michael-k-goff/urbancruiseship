@@ -1,0 +1,6 @@
+Scenario,Value (TWh of capacity needed),Source
+"Mostly PV, High Estimate",3.5,https://www.sciencedirect.com/science/article/pii/S0959652618301665
+"Mostly PV, Low Estimate",0.9,https://www.sciencedirect.com/science/article/pii/S0959652618301665
+"Mostly Wind, High Estimate",0.4,https://www.sciencedirect.com/science/article/pii/S0959652618301665
+"Mostly Wind, Low Estimate",0.02,https://www.sciencedirect.com/science/article/pii/S0959652618301665
+High Overall Estimate,5.4,https://pubs.rsc.org/en/content/articlelanding/ee/2018/c7ee03029k

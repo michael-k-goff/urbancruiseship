@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
+    <meta charset="utf-8">
+
+
+
+    <!-- Richard Burd's Fontawsome Account link tied to his Gmail account -->
+    <script src="https://kit.fontawesome.com/07a2e01765.js" crossorigin="anonymous"></script>
+
+
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+    <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
+    <!-- NOTE: the link must be from the './public' directory of the application as specified in 'package.json' here: "build-css:dev": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css" -->
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+
+    <!-- NOTE: this is a tempoary link in case we want to copy & paste the current UCS Homepage via. "View page source" -->
+    <!-- When the new UCS web page is rebuilt, this should be removed so we have faster loading times -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+      /* NOTE: this link works locally, but not on Heroku, so I'm trying the link above */
+      /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
+      @import url('https://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/varela-round-2');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/arreia-black');
+      @import url('http://fonts.cdnfonts.com/css/bpg-arial');
+
+      .arial-rounded-mt-bold-font {
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+      }
+
+      .bpg-arial-font {
+        font-family: 'BPG Arial', sans-serif;
+      }
+
+      .roboto-font {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .varela-round-font {
+        font-family: 'Varela Round', sans-serif;
+      }
+
+    </style>
+
+    <title>Our Standards - Urban Cruise Ship</title>
+  </head>
+  <body>
+    <div class="py-14">
+      
+<!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
+<!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
+
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  #navbar {
+    font-family: 'Varela Round', sans-serif;
+  }
+</style>
+
+<!-- navbar goes here -->
+<div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
+  <nav class="bg-gray-300">
+    <div class="max-w-5xl mx-auto bg-gray-400 pr-2">
+      <div class="flex justify-between text-lg">
+        <div class="flex space-x-4">
+          <!-- logo -->
+          <div>
+            <a href="./" class="flex items-center py-4 px-4 text-gray-900 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
+              <span class="font-bold">Home</span>
+            </a>
+          </div>
+          <!-- primary nav -->
+          <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
+            <a href="./about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
+            <a href="./standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
+            <a href="./team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
+            <a href="./activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
+          </div>
+        </div>
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="mailto:michael@urbancruiseship.org" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">Contact</a>
+        </div>
+
+
+        <!-- mobile button goes here -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- mobile menu-->
+  <div class="mobile-menu hidden md:hidden divide-y divide-gray-300 border-b-2 border-gray-300" id="mobile-dropdown">
+    <a href="/ucs-about" class="bg-gray-200 block  focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
+    <a href="/ucs-standards" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100  py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Standards</a>
+    <a href="/ucs-crew" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Crew</a>
+    <a href="/ucs-activities" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Activities</a>
+    <a href="mailto: michael@urbancruiseship.org" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Contact</a>
+  </div>
+</div>
+
+<!-- controlls the mobile dropdown menu-->
+<script type="text/javascript">
+  // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
+  // sources:
+  //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
+  //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
+
+  // grab everything we need
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  // add event listeners
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+  // sources:
+  //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+  //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+      prevScrollpos = currentScrollPos;
+
+    // if you set this "200" value to 0, you loose the delay effect
+    } else if (currentScrollPos > prevScrollpos + 200){
+      // the "-59px" below controlls how far up the navbar moves off the viewport when the user scrolls up
+      document.getElementById("navbar").style.top = "-59px";
+
+      // this section hides the mobile dropdown menu when the user scrolls down
+      let mobileDropdown = document.getElementById("mobile-dropdown")
+      if (!(mobileDropdown.classList.contains('hidden'))) {
+
+        // the "-244px" below controlls how far up the navbar moves off the viewport when the user scrolls up...when the mobile dropdown menu is deployed
+        document.getElementById("navbar").style.top = "-244px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
+</script>
+
+<!-- causes the navbar to drop-down into view when the user clicks the "Tab" key -->
+<!-- this is an accessability feature for people who cannot use a mouse properly -->
+<script type="text/javascript">
+  document.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    // Number 9 is the "Tab" key on the keyboard
+    if (event.keyCode === 9) {
+      // this script is for accessability;
+      // the user can "tab" and when the tabindex falls onto the navigation bar,
+      // the navigation bar will drop-down into view
+      document.getElementById("navbar").style.top = "0px";
+    }
+  });
+</script>
+
+<!-- How TO - Hide Menu on Scroll -->
+<!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
+<style media="screen">
+  #navbar {
+    transition: top 0.5s; /* Transition effect when sliding down (and up) */
+  }
+</style>
+
+        <!-- "max-w-screen-lg" limits the overall width of the website -->
+        <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
+        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto">
+          <style media="screen">
+  @media only screen and (max-width: 550px) {
+    #desktop-title {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 551px) {
+    #mobile-n-tablet-title {
+      display: none;
+    }
+  }
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+  .shadow-geometry:hover {
+    box-shadow: 4px 6px 6px #575757;
+    transition: 500ms;
+  }
+</style>
+
+<div class="bg-gray-100 roboto-font text-gray-800">
+  <!-- this component uses custom-colors not available in Tailwind-CSS -->
+<!-- these colors are "faded-out" version of the colors on the homepage for each of the specialized sites -->
+<style>
+  /* energy */
+  #spec-nav-1 {
+    background-color: #f2d0a0;
+    color: #3d342b
+  }
+  #spec-nav-1:hover {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+  #spec-nav-1:focus {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+
+  /* matter */
+  #spec-nav-2 {
+    background-color: #a1cf8f;
+    color: #364232
+  }
+  #spec-nav-2:hover {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+  #spec-nav-2:focus {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+
+  /* habitat */
+  #spec-nav-3 {
+    background-color: #8fcfc1;
+    color: #324240
+  }
+  #spec-nav-3:hover {
+    background-color: #19363b;
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-3:focus {
+    background-color: #19363b
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+
+  /* cities */
+  #spec-nav-4 {
+    background-color: #c49d9d;
+    color: #453632
+  }
+  #spec-nav-4:hover {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+  #spec-nav-4:focus {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+
+  /* waste */
+  #spec-nav-5 {
+    background-color: #e0d9af;
+    color: #454532
+  }
+  #spec-nav-5:hover {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+  #spec-nav-5:focus {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+
+  /* oceans */
+  #spec-nav-6 {
+    background-color: #8fb3cf;
+    color: #323645
+  }
+  #spec-nav-6:hover {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-6:focus {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+
+  /* space */
+  #spec-nav-7 {
+    background-color: #adadad;
+    color: #292929
+  }
+  #spec-nav-7:hover {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+  #spec-nav-7:focus {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+
+  /* costs */
+  #spec-nav-8 {
+    background-color: #b0a880;
+    color: #414232
+  }
+  #spec-nav-8:hover {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-8:focus {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+
+  /* history */
+  #spec-nav-9 {
+    background-color: #91a8b8;
+    color: #202c40
+  }
+  #spec-nav-9:hover {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-9:focus {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+</style>
+<nav> <!-- first made for the "./about" page-->
+  <div class="arial-rounded-mt-bold-font sm:flex sm:justify-between flex-wrap grid grid-cols-3 lg:grid:ignore pt-3 px-3 pb-2 text-center tracking-wide" style="border-bottom: 2px solid gray">
+    <a href="./site/energy" target="_blank" class="m-1 px-2 rounded" id="spec-nav-1">ENERGY</a>
+    <a href="./site/matter" target="_blank" class="m-1 px-2 rounded" id="spec-nav-2">MATTER</a>
+    <a href="./site/habitat" target="_blank" class="m-1 px-2 rounded" id="spec-nav-3">HABITAT</a>
+    <a href="./site/cities" target="_blank" class="m-1 px-2 rounded" id="spec-nav-4">CITIES</a>
+    <a href="./site/waste" target="_blank" class="m-1 px-2 rounded" id="spec-nav-5">WASTE</a>
+    <a href="./site/oceans" target="_blank" class="m-1 px-2 rounded" id="spec-nav-6">OCEANS</a>
+    <a href="./site/space" target="_blank" class="m-1 px-2 rounded" id="spec-nav-7">SPACE</a>
+    <a href="./site/internalization" target="_blank" class="m-1 px-2 rounded" id="spec-nav-8">COSTS</a>
+    <a href="./site/history" target="_blank" class="m-1 px-2 rounded" id="spec-nav-9">HISTORY</a>
+  </div>
+</nav>
+
+  <br>
+  <div class="mx-4">
+    <!-- this title is for the desktop view in which the entire title is visable -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-4xl" id="desktop-title">Our Standards</h1>
+
+    <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Our Standards</h1>
+    <h4 class="bpg-arial-font flex justify-center">Urban Cruise Ship operates according to the following principles:</h4>
+  </div>
+
+  <br><br><br>
+
+  <div>
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Content</div>
+    </div>
+  </div>
+
+  <div class="gap-2 justify-center grid lg:grid-cols-3 md:grid-cols-2 bg-gray-200 sm:p-10">
+    <!-- this is needed to fill a gap that forms in the background without it (in mobile)-->
+    <div class="sm:hidden bg-gray-200 h-8"></div>
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Data-Driven
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Our work is driven by data and science, not ideology, opinion, and special interest.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Unconflicted
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Urban Cruise Ship does not accept funding from corporate entities which might skew our findings.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Revelatory
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      We reveal what ought to be known -- not necessarily what is expected.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Comprehensive
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Urban Cruise Ship analyzes the issues from engineering, economic, social, and political perspectives.&nbsp; Comprehensiveness should increase the likelihood that solutions will be workable.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Effective
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Urban Cruise Ship seeks to provide for policymakers, business leaders, and individuals the most relevant and effective solutions to today's most pressing ecological challenges.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Applicable
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Widespread applicability is sought. Appropriate exceptions should be clearly noted.
+    </p>
+</div>
+
+  </div>
+
+  <br><br><br><br><br>
+
+  <div class="">
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Content/Presentation</div>
+    </div>
+  </div>
+
+  <div class="gap-2 justify-center grid lg:grid-cols-3 md:grid-cols-2 bg-gray-200 sm:p-10">
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Concise
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      To prevent important facts from being buried or obscured, Urban Cruise Ship presents only essential material. Links are provided for further detail. 
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      On Point
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      To encourage reading the entire website, content is topically limited. Further worthy material belongs on separate web sites.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Self-motivated
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      As this guides Urban Cruise Ship's future direction foremost, there is internal motivation to get it right and save readers time.
+    </p>
+</div>
+
+  </div>
+
+  <br><br><br><br><br>
+
+  <div class="">
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Presentation</div>
+    </div>
+  </div>
+
+  <div class="gap-2 justify-center grid lg:grid-cols-3 md:grid-cols-2 bg-gray-200 sm:p-10">
+    <!-- this is needed to fill a gap that forms in the background without it (in mobile)-->
+    <div class="sm:hidden bg-gray-200 h-8"></div>
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Readable
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Urban Cruise Ship recognizes the importance of using correct terminology, but also in making our findings understandable to the widest possible audience.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Summary-led
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      To help the most readers, where possible, summary material is placed first, ahead of more detailed background material supporting it.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Graphic
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Where possible, metrics are portrayed graphically, accompanied by numbers.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Non-Color Dependent
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      To be most versatile, where possible, graphics are composed well enough that color is not required.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Substantive
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Content quality must always exceed presentation polish.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      No Greenwashing
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Profuse flowery / leafy / heartwarming images and jargon are associated with so many polluting companies and underperforming organizations that we avoid using them.&nbsp; Let readers judge quality based on content.
+    </p>
+</div>
+
+  </div>
+
+  <br><br><br><br><br>
+
+  <div class="">
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Reference</div>
+    </div>
+  </div>
+
+  <div class="gap-2 justify-center grid lg:grid-cols-3 md:grid-cols-2 bg-gray-200 sm:p-10">
+    <!-- this is needed to fill a gap that forms in the background without it (in mobile)-->
+    <div class="sm:hidden bg-gray-200 h-8"></div>
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Footnoted
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Cursor-activated reference appearance saves readers' time.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Referenced
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Fully. This also gives Urban Cruise Ship grounds for insisting proper credit is given to us in return.
+    </p>
+</div>
+
+
+    <style media="screen">
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry-no-hover-effects {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+</style>
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-3 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
+      Copyrighted
+    </h2>
+    <p class="p-4 pb-6 text-gray-800">
+      Urban Cruise Ship wants to be able to prevent misuse or misrepresentation of its material.
+    </p>
+</div>
+
+
+  </div>
+
+</div>
+
+        </main>
+
+      <br><br>
+<footer class="text-center tracking-widest text-gray-800 sm:text-2xl m-4 varela-round-font">Copyright © Urban Cruise Ship 2021</footer>
+
+
+    </div>
+  </body>
+</html>

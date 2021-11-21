@@ -1,0 +1,231 @@
+        <!-- Page Heading/Breadcrumbs -->
+        <div style="margin-left:20%; margin-right:20%" class="row">
+            <h1 style="font-size:50px; padding-bottom: 0.05em; margin-bottom: 0;">Our Standards
+                <!--<small>About Us</small>-->
+            </h1>
+            <!--<ol class="breadcrumb">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="active">About</li>
+            </ol>-->
+        </div>
+        <!-- /.row -->
+		
+		<div style="margin-left:20%; margin-right:20%">
+			<p style="font-size:20px">Urban Cruise Ship operates according to the following principles:</p>
+			<br>
+		</div>
+
+        <!-- Marketing Icons Section -->
+		<h3 style="margin-left:20%; margin-right:20%">Content</h3>
+        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
+			<p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Data-Driven</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Our work is driven by data and science, not ideology, opinion, and special interest.</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Unconflicted</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship does not accept funding from corporate entities which might skew our findings.</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Revelatory</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>We reveal what ought to be known -- not necessarily what is expected.</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+		
+		<div class="row" class="row" style="margin-left:20%; margin-right:20%">
+            <p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Comprehensive</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship analyzes the issues from engineering, economic, social, and political perspectives. Comprehensiveness should increase the likelihood that solutions will be workable.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Effective</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship seeks to provide for policymakers, business leaders, and individuals the most relevant and effective solutions to today's most pressing ecological challenges.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Applicable</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Widespread applicability is sought.  Appropriate exceptions should be clearly noted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+		<br>
+		
+		<h3 style="margin-left:20%; margin-right:20%">Content/Presentation</h3>
+		<div class="row" class="row" style="margin-left:20%; margin-right:20%">
+            <p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Concise</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>To prevent important facts from being buried or obscured, Urban Cruise Ship presents only essential material. Links are provided for further detail.
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>On Point</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>To encourage reading the entire website, content is topically limited. Further worthy material belongs on separate web sites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Self-motivated</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>As this guides Urban Cruise Ship's future direction foremost, there is internal motivation to get it right and save readers time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+		
+		<br>
+		<h3 style="margin-left:20%; margin-right:20%">Presentation</h3>
+        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
+            
+            <p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Readable</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship recognizes the importance of using correct terminology, but also in making our findings understandable to the widest possible audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Summary-led</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>To help the most readers, where possible, summary material is placed first, ahead of more detailed background material supporting it.</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Graphic</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Where possible, metrics are portrayed graphically, accompanied by numbers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
+			<p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Non-Color Dependent</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>To be most versatile, where possible, graphics are composed well enough that color is not required.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Substantive<br><br></b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Content quality must always exceed presentation polish.</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>No Greenwashing</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Profuse flowery / leafy / heartwarming images and jargon are associated with so many polluting companies and underperforming organizations that we avoid using them. Let readers judge quality based on content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+		
+		<br>
+		<h3 style="margin-left:20%; margin-right:20%">Reference</h3>
+		
+        <div class="row" class="row" style="margin-left:20%; margin-right:20%">
+            <p><div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Footnoted</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Cursor-activated reference appearance saves readers' time.</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Referenced</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Fully.  This also gives Urban Cruise Ship grounds for insisting proper credit is given to us in return.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:0px; padding-right:20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom:1px; padding-top:1px;">
+                        <h4 class="standard-heading"><i class="fa fa-fw fa-check"></i> <b>Copyrighted</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Urban Cruise Ship wants to be able to prevent misuse or misrepresentation of its material.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->

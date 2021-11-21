@@ -1,0 +1,15 @@
+Type,Value
+Nuclear,0.85
+Offshore Wind,0.3645
+Onshore Wind,0.7695
+Ocean,0.2025
+CSP,0.2025
+Natural Gas Combined Cycle,0.5535
+Gas: CCGT with CCS,0.486
+Solar PV,0.81
+Lignite,3.7916
+Hard Coal,4.3586
+Hard Coal with CCS,4.5476
+Hard Coal: Oxyfuel with CCS,3.9806
+Biomass,2.727
+Hydro,0.6885

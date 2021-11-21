@@ -1,0 +1,4 @@
+Reaction Type,Reaction Equation,Temperature (millions of kelvin),Neutronicity,Power Density,Advantages,Disadvantages
+D-T,2D+3T->4He+3.5 MeV+n+14.1 MeV,150.0,0.8,34.0,"'Low' temperature, 'high' density, most developed approach",High neutronicity
+D-He3,2D+3He->4He+1p+18.3 MeV,700.0,0.05,0.43,Lowest temperature and highest density of aneutronic reactions,Scarcity of He-3
+p-B11,1p+11B->3 4He+8.7 MeV,2320.0,0.001,0.014,Low neutronicity,"Low density, high temperature"

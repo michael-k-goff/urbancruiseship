@@ -1,0 +1,67 @@
+        <!-- Page Heading/Breadcrumbs -->
+        <div style="margin-left:20%; margin-right:20%" class="row">
+            <h1 style="font-size:50px">About Urban Cruise Ship
+                <!--<small>About Us</small>-->
+            </h1>
+            <!--<ol class="breadcrumb">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="active">About</li>
+            </ol>-->
+        </div>
+        <!-- /.row -->
+		
+		<div style="margin-left:20%; margin-right:20%">
+			<p style="font-size:20px">Founded in 2014, Urban Cruise Ship presents environmental solutions.</p>
+			<br><br>
+		</div>
+
+        <!-- Content Row -->
+        <div style="margin-left:20%; margin-right:20%" class="row">
+                <div class="panel-group" id="accordion">
+                    <div class="panel-heading">
+						<button type="button" class="collapsible one-line-solution">Why the name "Urban Cruise Ship?"</button>
+                    </div>
+                    <div class="content content-w content-contracted content-shrinking">
+								This comes from the concept of taking something that works well now, due to good design, and applying that elsewhere to solve problems. E.g. urban problems could be reduced if cities were designed more like cruise ships: attractive and enjoyable, but compact and with all residents' needs met within walking distance.<br><br>This is a classic application of design-approach transfer. Urban Cruise Ship also explores other topics where this might work well.<br><br>Like a real ship, Urban Cruise Ship is navigational. Its crew takes visitors to numerous ports of entry into different ways of solving problems.
+                    </div>
+					
+                    <!-- /.panel -->
+                        <div class="panel-heading">
+							<button type="button" class="collapsible one-line-solution">Why is Urban Cruise Ship needed?</button>
+	                    </div>
+                        <div class="content content-w content-contracted content-shrinking">
+								Progress in the modern environmental movement has been uneven in many key areas: biodiversity loss/species extinction, habitat degradation, spreading invasive species, ocean acidification, poor air quality, unhealthy water supplies, insufficiently-tested chemical exposures, lack of adequate sanitation, accelerating waste generation and disposal, litter, urban sprawl, fossil fuel depletion, climate change, storm/earthquake vulnerability, malnutrition, topsoil loss, food shortages, obesity, unsheltered living conditions, forced migration, cultural loss, and scenery defilement.<br><br>Education has spurred widespread desire for improvement in all of these areas, but to date, current solutions have not kept pace with increasing needs. Hence, better solutions are VERY much desired and needed now.
+                        </div>
+                    
+                    <!-- /.panel -->
+
+                        <div class="panel-heading">
+							<button type="button" class="collapsible one-line-solution">What does Urban Cruise Ship seek to be?</button>
+	                    </div>
+                        <div class="content content-w content-contracted content-shrinking">
+                                We want to be a highly respected source of guidance, that provides the most helpful and accurate data, practical and sufficient analysis, and workable solutions for ecological problems.
+                        </div>
+
+                    <!-- /.panel -->
+                        <div class="panel-heading">
+                                <button type="button" class="collapsible one-line-solution">Who started Urban Cruise Ship, and why?</a>
+                        </div>
+                        <div class="content content-w content-contracted content-shrinking">
+								Mathematician Michael Goff and designer John van der Harst met via the Nashville Peace and Justice Center, and worked together in Recycling Advocates of Middle Tennessee. Both continued to work in various other organizations as well -- some with each other, and others apart.  Discussions continued over what worked and didn't.<br><br>Both wanted to maximize their effect.  Each had prior preferences for future work, but conservatively chose to work together first on fundamental analysis which would properly prioritize choices systematically. That was, and is, Urban Cruise Ship.
+                        </div>
+                    <!-- /.panel -->
+					
+                    <!-- /.panel -->
+                        <div class="panel-heading">
+                                <button type="button" class="collapsible one-line-solution">What became Urban Cruise Ship's priorities?</a>
+                        </div>
+                        <div class="content content-w content-contracted content-shrinking">
+								Initially, clean energy production was a top priority, due to public interest, time urgency, and lack of progress to date. Land conservation was already high on our agenda. However, systematic analysis revealed an even wider array of needs and solution "best deals."<br><br>Our standards section shows what our attitude has been toward analyzing our options. Rigorously applying these standards, we reasoned, should result in the best set of priorities.<br><br>One type of priority emerged frequently: removal of special-interest subsidies, and getting taxation and regulation right, solve problems in many areas efficiently, as they then allow markets to drive the right choices thereafter.
+                        </div>
+                </div>
+				<!-- /.panel-group -->
+        </div>
+        <!-- /.row -->
+		
+        

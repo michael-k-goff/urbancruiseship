@@ -25,7 +25,13 @@ function login_get() {
 }
 
 function render_image_data(im,num) {
-	var font_change = {"Not Done":"<font color='red'>", "Revision Needed":"<font color='orange'>", "Done":"<font color='green'>"}[im["status"]]
+	var font_change = {
+		"Not Done":"<font color='red'>",
+		"Revision Needed":"<font color='orange'>",
+		"Solution":"<font color='orange'>",
+		"Done":"<font color='green'>",
+		"On Hold":"<font color='purple'>"
+	}[im["status"]]
 	var result = "<big><b>" + (num) + ") " + im["filename"] + "</b></big><br>"+font_change+"Status: "+im["status"]+"</font><br><br>" + im["details"] + "<br><br>";
 	if ("table" in im) {
 		result += "<table><tr><td>"+im["table"][0].join("</td><td>")+"</td></tr>";
@@ -53,7 +59,7 @@ function dashboard() {
 	var todo = JSON.parse(fs.readFileSync(__dirname+'/todo.json','utf8'));
 	var count = 1;
 	for (var i=0; i<todo.length; i++) {
-		if (todo[i]["status"] != "Done") {
+		if (todo[i]["status"] == "Not Done" || todo[i]["status"] == "Revision Needed" || todo[i]["status"] == "Solution") {
 			result += render_image_data(todo[i],count);
 			count += 1;
 		}

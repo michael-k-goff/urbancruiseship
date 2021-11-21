@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
+    <meta charset="utf-8">
+
+
+
+    <!-- Richard Burd's Fontawsome Account link tied to his Gmail account -->
+    <script src="https://kit.fontawesome.com/07a2e01765.js" crossorigin="anonymous"></script>
+
+
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+    <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
+    <!-- NOTE: the link must be from the './public' directory of the application as specified in 'package.json' here: "build-css:dev": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css" -->
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+
+    <!-- NOTE: this is a tempoary link in case we want to copy & paste the current UCS Homepage via. "View page source" -->
+    <!-- When the new UCS web page is rebuilt, this should be removed so we have faster loading times -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+      /* NOTE: this link works locally, but not on Heroku, so I'm trying the link above */
+      /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
+      @import url('https://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/varela-round-2');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+      @import url('http://fonts.cdnfonts.com/css/arreia-black');
+      @import url('http://fonts.cdnfonts.com/css/bpg-arial');
+
+      .arial-rounded-mt-bold-font {
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+      }
+
+      .bpg-arial-font {
+        font-family: 'BPG Arial', sans-serif;
+      }
+
+      .roboto-font {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .varela-round-font {
+        font-family: 'Varela Round', sans-serif;
+      }
+
+    </style>
+
+    <title>Activities - Urban Cruise Ship</title>
+  </head>
+  <body>
+    <div class="py-14">
+      
+<!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
+<!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
+
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  #navbar {
+    font-family: 'Varela Round', sans-serif;
+  }
+</style>
+
+<!-- navbar goes here -->
+<div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
+  <nav class="bg-gray-300">
+    <div class="max-w-5xl mx-auto bg-gray-400 pr-2">
+      <div class="flex justify-between text-lg">
+        <div class="flex space-x-4">
+          <!-- logo -->
+          <div>
+            <a href="./" class="flex items-center py-4 px-4 text-gray-900 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
+              <span class="font-bold">Home</span>
+            </a>
+          </div>
+          <!-- primary nav -->
+          <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
+            <a href="./about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
+            <a href="./standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
+            <a href="./team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
+            <a href="./activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
+          </div>
+        </div>
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="mailto:michael@urbancruiseship.org" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">Contact</a>
+        </div>
+
+
+        <!-- mobile button goes here -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- mobile menu-->
+  <div class="mobile-menu hidden md:hidden divide-y divide-gray-300 border-b-2 border-gray-300" id="mobile-dropdown">
+    <a href="./about" class="bg-gray-200 block  focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
+    <a href="./standards" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100  py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Standards</a>
+    <a href="./team" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Crew</a>
+    <a href="./activities" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Activities</a>
+    <a href="mailto: michael@urbancruiseship.org" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Contact</a>
+  </div>
+</div>
+
+<!-- controlls the mobile dropdown menu-->
+<script type="text/javascript">
+  // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
+  // sources:
+  //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
+  //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
+
+  // grab everything we need
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  // add event listeners
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+  // sources:
+  //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+  //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+      prevScrollpos = currentScrollPos;
+
+    // if you set this "200" value to 0, you loose the delay effect
+    } else if (currentScrollPos > prevScrollpos + 200){
+      // the "-59px" below controlls how far up the navbar moves off the viewport when the user scrolls up
+      document.getElementById("navbar").style.top = "-59px";
+
+      // this section hides the mobile dropdown menu when the user scrolls down
+      let mobileDropdown = document.getElementById("mobile-dropdown")
+      if (!(mobileDropdown.classList.contains('hidden'))) {
+
+        // the "-244px" below controlls how far up the navbar moves off the viewport when the user scrolls up...when the mobile dropdown menu is deployed
+        document.getElementById("navbar").style.top = "-244px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
+</script>
+
+<!-- causes the navbar to drop-down into view when the user clicks the "Tab" key -->
+<!-- this is an accessability feature for people who cannot use a mouse properly -->
+<script type="text/javascript">
+  document.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    // Number 9 is the "Tab" key on the keyboard
+    if (event.keyCode === 9) {
+      // this script is for accessability;
+      // the user can "tab" and when the tabindex falls onto the navigation bar,
+      // the navigation bar will drop-down into view
+      document.getElementById("navbar").style.top = "0px";
+    }
+  });
+</script>
+
+<!-- How TO - Hide Menu on Scroll -->
+<!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
+<style media="screen">
+  #navbar {
+    transition: top 0.5s; /* Transition effect when sliding down (and up) */
+  }
+</style>
+
+        <!-- "max-w-screen-lg" limits the overall width of the website -->
+        <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
+        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto">
+          <style media="screen">
+  @media only screen and (max-width: 550px) {
+    #desktop-title {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 551px) {
+    #mobile-n-tablet-title {
+      display: none;
+    }
+  }
+</style>
+
+<div class="bg-gray-100 roboto-font text-gray-800">
+  <!-- this component uses custom-colors not available in Tailwind-CSS -->
+<!-- these colors are "faded-out" version of the colors on the homepage for each of the specialized sites -->
+<style>
+  /* energy */
+  #spec-nav-1 {
+    background-color: #f2d0a0;
+    color: #3d342b
+  }
+  #spec-nav-1:hover {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+  #spec-nav-1:focus {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+
+  /* matter */
+  #spec-nav-2 {
+    background-color: #a1cf8f;
+    color: #364232
+  }
+  #spec-nav-2:hover {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+  #spec-nav-2:focus {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+
+  /* habitat */
+  #spec-nav-3 {
+    background-color: #8fcfc1;
+    color: #324240
+  }
+  #spec-nav-3:hover {
+    background-color: #19363b;
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-3:focus {
+    background-color: #19363b
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+
+  /* cities */
+  #spec-nav-4 {
+    background-color: #c49d9d;
+    color: #453632
+  }
+  #spec-nav-4:hover {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+  #spec-nav-4:focus {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+
+  /* waste */
+  #spec-nav-5 {
+    background-color: #e0d9af;
+    color: #454532
+  }
+  #spec-nav-5:hover {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+  #spec-nav-5:focus {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+
+  /* oceans */
+  #spec-nav-6 {
+    background-color: #8fb3cf;
+    color: #323645
+  }
+  #spec-nav-6:hover {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-6:focus {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+
+  /* space */
+  #spec-nav-7 {
+    background-color: #adadad;
+    color: #292929
+  }
+  #spec-nav-7:hover {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+  #spec-nav-7:focus {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+
+  /* costs */
+  #spec-nav-8 {
+    background-color: #b0a880;
+    color: #414232
+  }
+  #spec-nav-8:hover {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-8:focus {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+
+  /* history */
+  #spec-nav-9 {
+    background-color: #91a8b8;
+    color: #202c40
+  }
+  #spec-nav-9:hover {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-9:focus {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+</style>
+<nav> <!-- first made for the "./about" page-->
+  <div class="arial-rounded-mt-bold-font sm:flex sm:justify-between flex-wrap grid grid-cols-3 lg:grid:ignore pt-3 px-3 pb-2 text-center tracking-wide" style="border-bottom: 2px solid gray">
+    <a href="./site/energy" target="_blank" class="m-1 px-2 rounded" id="spec-nav-1">ENERGY</a>
+    <a href="./site/matter" target="_blank" class="m-1 px-2 rounded" id="spec-nav-2">MATTER</a>
+    <a href="./site/habitat" target="_blank" class="m-1 px-2 rounded" id="spec-nav-3">HABITAT</a>
+    <a href="./site/cities" target="_blank" class="m-1 px-2 rounded" id="spec-nav-4">CITIES</a>
+    <a href="./site/waste" target="_blank" class="m-1 px-2 rounded" id="spec-nav-5">WASTE</a>
+    <a href="./site/oceans" target="_blank" class="m-1 px-2 rounded" id="spec-nav-6">OCEANS</a>
+    <a href="./site/space" target="_blank" class="m-1 px-2 rounded" id="spec-nav-7">SPACE</a>
+    <a href="./site/internalization" target="_blank" class="m-1 px-2 rounded" id="spec-nav-8">COSTS</a>
+    <a href="./site/history" target="_blank" class="m-1 px-2 rounded" id="spec-nav-9">HISTORY</a>
+  </div>
+</nav>
+
+  <br>
+  <div class="mx-4">
+    <!-- Larger screens can handle a larger font -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-4xl" id="desktop-title">Activities</h1>
+
+    <!-- As screens get smaller, we want a smaller font -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Activities</h1>
+    <h4 class="bpg-arial-font flex justify-center">Our connections with others are important parts of our history.</h4>
+  </div>
+
+  <br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="1" class="bpg-arial-font mx-3">Memberships</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        <b>Nashville Peace and Justice Center</b>, 2015-present.
+      </p>
+      <br>
+
+      <center class="text-blue-900">
+        <a tabindex="2" href="https://www.nashvillepeacejustice.org/" target="_blank" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fas fa-home fa-3x"></i>
+        </a>
+        <br><br>
+      </center>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="2" class="bpg-arial-font mx-3">Donors</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        <b>John van der Harst</b>, 2017-present.
+      </p>
+      <br>
+      <p>
+        <b>Nashville Peace and Justice Center</b>, 2015.&nbsp; Urban Cruise Ship was an NPJC project in 2015.
+      </p>
+      <br>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="3" class="bpg-arial-font mx-3">Clients</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        <b>Tennessee Environmental Council</b>, 2016. Full cost of solid waste disposal for Davidson County, TN.
+      </p>
+      <br>
+      <center class="text-blue-900">
+        <a tabindex="4" href="https://www.tectn.org/" target="_blank" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fas fa-home fa-3x"></i>
+        </a>
+        <br><br>
+      </center>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="5" class="bpg-arial-font mx-3">Presentations</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        <b>Online</b>, November 2021.&nbsp; Michael Goff presented on environmental
+		concerns related to space exploration to the Overview Network. This
+		presentation followed a full report on the subject.
+      </p>
+      <br>
+	  <p>
+        <b>Lansing, MI</b>, February 2020.&nbsp; Lee Nelson presented on the
+        links between different dietary choices and their environmental
+        consequences at an event called Sprouting, which was organized to spread
+        environmental awareness and appreciation. It was held at The Fledge, a
+        non-profit organization and space that helps local start-ups brainstorm
+        and build their businesses.
+      </p>
+      <br>
+      <p>
+        <b>Santa Fe, NM</b>, July 2019.&nbsp; <b>Michael Goff</b> presented an overview
+        of current and forecasted world energy production at the Santa Fe
+        Institute, as part of their Sustainability Summer School program.
+      </p>
+      <br>
+      <p>
+        <b>Nashville, TN</b>, January 9, 11, and 23, 2018.&nbsp;
+        <b>John van der Harst</b> and <b>Andrew Evans</b> presented handouts on
+        mode and system efficiencies and system length/population comparisons at
+        a public hearing and subsequent committee and full meetings of the
+        Metropolitan Council of Nashville and Davidson County on a light rail
+        plan tax referendum.
+      </p>
+      <br>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="6" class="bpg-arial-font mx-3">Accomplishments</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        <b>2020-Present:</b> Invented and developed
+        <a tabindex="7" href="./topic/history/endeavors" target="_blank" class="duration-500 hover:text-red-900 hover:underline focus:text-red-900 focus:underline text-blue-900 transition">
+          <strong><i>Comparative Progress Studies</i></strong>
+        </a>
+        - a subfield of Progress Studies, as a tool for improving and verifying
+        accuracy of cost-benefit metrics for solutions.&nbsp; This can also
+        improve policymakers' funding prioritization.
+      </p>
+      <br>
+    </div>
+  </div>
+</div>
+
+        </main>
+
+      <br><br>
+<footer class="text-center tracking-widest text-gray-800 sm:text-2xl m-4 varela-round-font">Copyright © Urban Cruise Ship 2021</footer>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+        
+		
+		
+        <!-- Content Row -->
+        <div style="margin-left:20%; margin-right:20%" class="row">
+                <h1 style="font-size:50px; padding-bottom: 0.05em; margin-bottom: 0;">Activities</h1>
+				<p style="font-size:20px">Our connections with others are important parts of our history.</p>
+				<br>
+				
+				<h3 style="font-size:25px;">Memberships</h3>
+				<p><b>Nashville Peace and Justice Center</b>, 2015-present.</p>
+				<br>
+				
+				<h3 style="font-size:25px;">Donors</h3>
+				<p><b>John van der Harst</b>, 2017-present.</p>
+				<p><b>Nashville Peace and Justice Center</b>, 2015. Urban Cruise Ship was an NPJC project in 2015.</p>
+				<br>
+				
+				<h3 style="font-size:25px;">Clients</h3>
+				<p><b>Tennessee Environmental Council</b>, 2016. Full cost of solid waste disposal for Davidson County, TN.</p>
+				<br>
+				
+				<h3 style="font-size:25px;">Presentations</h3>
+				<p><b>Lansing, MI</b>, February 2020. <b>Lee Nelson</b> presented on the links between different dietary choices and their environmental consequences at an event called Sprouting, which was organized to spread environmental awareness and appreciation. It was held at The Fledge, a non-profit organization and space that helps local start-ups brainstorm and build their businesses.</p>
+				<p><b>Santa Fe, NM</b>, July 2019. <b>Michael Goff</b> presented an overview of current and forecasted world energy production at the Santa Fe Institute, as part of their Sustainability Summer School program.</p>
+				<p><b>Nashville, TN</b>, January 9, 11, and 23, 2018. <b>John van der Harst</b> and <b>Andrew Evans</b> presented handouts on mode and system efficiencies and system length/population comparisons at a public hearing and subsequent committee and full meetings of the Metropolitan Council of Nashville and Davidson County on a light rail plan tax referendum.</p>
+				<br>
+				
+				<h3 style="font-size:25px;">Accomplishments</h3>
+				<p><b>2020-Present: </b>Invented and developed <i><a href=/topic/history/endeavors>Comparative Progress Studies</a></i>, a subfield of <i>Progress Studies</i>, as a tool for improving and verifying accuracy of cost-benefit metrics for solutions. This can also improve policymakers' funding prioritization.</p>
+				<br>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
