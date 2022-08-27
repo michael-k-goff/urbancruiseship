@@ -107,8 +107,24 @@ function render_paragraph_table(para, data, ref_ids) {
 	return text;
 }
 
+render_solution_from_file = (filename, data, ref_ids) => {
+	let solution = JSON.parse(fs.readFileSync("content/"+filename).toString());
+	let title_block = [ref.add_references(solution["problem"],ref_ids, data.references), ref.add_references(solution["solution"],ref_ids, data.references)];
+	let result = "<button type=\"button\" class=\"collapsible two-line-solution\">Problem:&nbsp&nbsp&nbsp"+ title_block[0]+"<br>Solution:&nbsp&nbsp&nbsp"+title_block[1]+"</button>";
+	result += "<div class=\"content content-contracted content-shrinking\">";
+	for (let i=0; i<solution.text.length; i++) {
+		result += render_paragraph(solution.text[i],data, ref_ids, true);
+	}
+	result += "<a href=\"#\" onclick=\"return false;\">Back to the main section</a>";
+	result += "</div>"
+	return result;
+}
+
 function render_paragraph_solution(para, data, ref_ids) {
 	var blocks = para.split("@");
+	if (para[1] == "@") {
+		return render_solution_from_file(blocks[2], data, ref_ids);
+	}
 	let title_block = ref.add_references(blocks[1],ref_ids, data.references).split("!");
 	let result = "";
 	if (title_block.length === 1) {
